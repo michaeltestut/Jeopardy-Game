@@ -28,3 +28,15 @@ code {
   align-items: start;
   justify-content: center;
 }
+
+.block{
+  background-color: blue;
+  height:10vh;
+  width:10vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Swiss 911';
+  font-weight: bold;
+}
