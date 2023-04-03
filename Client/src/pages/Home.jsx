@@ -16,13 +16,33 @@ export default function Home() {
                         <h1 className='title'> Jeopardy! </h1>
                     </div>
                     <div className='button'>
-                        <button className='play' onClick={() => navigate('/jeopardy')}>Click to Play</button>
+                        <StyledButton className='play' onClick={() => navigate('/jeopardy')}>Click to Play</StyledButton>
                     </div>
                 </div>
             </div>
         </Container>
     )
 }
+
+const StyledButton = styled.button`
+        width: 30vh;
+        height: 7vh;
+        background-color:white;
+        border: 1px solid rgba(45,0,125,255);
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(45,0,125,255);
+        color: rgba(45,0,125,255);
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor:pointer;
+        transition:0.3s ease-in-out;
+        &:hover{
+            background-color: rgba(128,0,144,255);
+            color: white;
+        }
+        
+    
+`
 
 const Container = styled.div`
     .front-page{
@@ -58,23 +78,6 @@ const Container = styled.div`
     .button{
         text-align:center;
     }
-    .play{
-        width: 30vh;
-        height: 7vh;
-        background-color:white;
-        border: 1px solid rgba(45,0,125,255);
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px rgba(45,0,125,255);
-        color: rgba(45,0,125,255);
-        font-size: 1.5rem;
-        font-weight: bold;
-        cursor:pointer;
-        transition:0.3s ease-in-out;
-        &:hover{
-            background-color: rgba(128,0,144,255);
-            color: white;
-        }
-        
-    }
+
 
 `
