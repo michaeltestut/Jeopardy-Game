@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function PriceBlock() {
+export default function PriceBlock(props) {
   return (
     <Container>
       <div className='block'>
-        <p className='price'>$PRICE</p>
+        <p className='price'>${props.price}</p>
       </div>
     </Container>
   )

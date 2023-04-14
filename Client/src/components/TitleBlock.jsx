@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function TitleBlock() {
+export default function TitleBlock(props) {
     return (
         <Container>
             <div className='block'>
-                <p className='title'>TITLE</p>
+                <p className='title'>{props.category}</p>
             </div>
         </Container>
     )
