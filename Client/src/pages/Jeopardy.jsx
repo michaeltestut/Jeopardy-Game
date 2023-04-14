@@ -2,7 +2,8 @@ import React from 'react'
 import TitleBlock from '../components/TitleBlock'
 import styled from 'styled-components';
 import PriceBlock from '../components/PriceBlock';
-import Background from '../assets/Background.jpeg'
+import Background from '../assets/Background.jpeg';
+import { fetchCategories } from '../services/JeopardyService';
 
 export default function Jeopardy() {
     return (
@@ -60,6 +61,7 @@ export default function Jeopardy() {
 
 
             </table>
+            <button onClick={fetchCategories}>Fetch Categories</button>
         </Container>
     )
 }
