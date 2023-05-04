@@ -4,25 +4,42 @@ import styled from 'styled-components';
 import PriceBlock from '../components/PriceBlock';
 import Background from '../assets/Background.jpeg';
 import { fetchCategories } from '../services/JeopardyService';
+import { useEffect, useState } from 'react';
 
 
 export default function Jeopardy() {
-    const fetch = () => {
-        
-        const categories = fetchCategories();
+    const [category0, setCategory0] = useState("");
+    const [category1, setCategory1] = useState("");
+    const [category2, setCategory2] = useState("");
+    const [category3, setCategory3] = useState("");
+    const [category4, setCategory4] = useState("");
+    const [category5, setCategory5] = useState("");
+    
+    const fetch = async () => {
+        let categories = await fetchCategories();
         console.log(categories)
+        setCategory0(categories[0].title)
+        setCategory1(categories[1].title)
+        setCategory2(categories[2].title)
+        setCategory3(categories[3].title)
+        setCategory4(categories[4].title)
+        setCategory5(categories[5].title)
+        
     }
+    useEffect(() => {
+            fetch()
+    }, []);
     return (
         <Container>
             <table className='gameboard'>
                 <thead>
                     <tr>
-                        <th><TitleBlock category="title1" /></th>
-                        <th><TitleBlock category="title2" /></th>
-                        <th><TitleBlock category="title3" /></th>
-                        <th><TitleBlock category="title4" /></th>
-                        <th><TitleBlock category="title5" /></th>
-                        <th><TitleBlock category="title6" /></th>
+                        <th><TitleBlock category={category0} /></th>
+                        <th><TitleBlock category={category1} /></th>
+                        <th><TitleBlock category={category2} /></th>
+                        <th><TitleBlock category={category3} /></th>
+                        <th><TitleBlock category={category4} /></th>
+                        <th><TitleBlock category={category5} /></th>
 
                     </tr>
                 </thead>
