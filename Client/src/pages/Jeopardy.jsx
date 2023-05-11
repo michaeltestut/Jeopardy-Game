@@ -86,7 +86,6 @@ export default function Jeopardy() {
                     </tr>
                 </tbody>
             </table>
-            <button onClick={fetch}>Fetch Categories</button>
         </Container>
     )
 }

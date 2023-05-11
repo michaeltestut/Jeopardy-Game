@@ -22,8 +22,12 @@ const randomCats = (number) => {
     let randomCatArray = [];
     for (var i = 0; i < 6; i++){
         const randomNumber = getRandomInt(number);
-
-    randomCatArray.push(randomNumber)
+        if (randomCatArray.includes(randomNumber)) { 
+            i--;
+        }
+        else {
+            randomCatArray.push(randomNumber)
+        }
     }
     return randomCatArray
 }
