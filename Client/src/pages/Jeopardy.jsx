@@ -17,7 +17,6 @@ export default function Jeopardy() {
     
     const fetch = async () => {
         let categories = await fetchCategories();
-        console.log(categories)
         setCategory0(categories[0].title)
         setCategory1(categories[1].title)
         setCategory2(categories[2].title)
@@ -28,7 +27,7 @@ export default function Jeopardy() {
     }
     useEffect(() => {
             fetch()
-    }, []);
+    },[]);
     return (
         <Container>
             <table className='gameboard'>

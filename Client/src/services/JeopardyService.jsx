@@ -1,21 +1,32 @@
 import axios from 'axios'
 
+
 export const fetchCategories = async () => {
+    const selectedCategories = []
     try {
-        const response = await axios.get('http://jservice.io/api/categories?count=6');
+        const response = await axios.get('http://jservice.io/api/categories?count=1000');
         const allCategories = response.data;
-        return allCategories
+        const randomCatArray = randomCats(allCategories.length)
+        console.log(randomCatArray)
+        for (var i = 0; i < randomCatArray.length; i++){
+            selectedCategories.push(allCategories[randomCatArray[i]])
+        }
+        return selectedCategories
     } catch (error) {
         console.log(error)
     }
 
 }
 
-// export const randomCategories = () => {
-//     const categories = fetchCategories();
-//     randomCategoriesArray = [];
-//     for (var i = 0; i < 6; i++){
-//         categories 
-//     }
+const randomCats = (number) => {
+    let randomCatArray = [];
+    for (var i = 0; i < 6; i++){
+        const randomNumber = getRandomInt(number);
 
-// }
+    randomCatArray.push(randomNumber)
+    }
+    return randomCatArray
+}
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
