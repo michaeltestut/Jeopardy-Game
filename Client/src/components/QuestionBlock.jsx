@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+
 
 export default function QuestionBlock() {
   return (
-    <div>QuestionBlock</div>
+    <Container>
+      <div className='block'>
+        <p className='question'>{props.category}</p>
+      </div>
+    </Container>
   )
 }
