@@ -39,4 +39,7 @@ const getClues = async (category_id) => {
     try {
         const response = await axios.get('http://jservice.io/api/clues?category='+category_id);
     }
+    catch (error) {
+        console.log(error)
+    }
 }

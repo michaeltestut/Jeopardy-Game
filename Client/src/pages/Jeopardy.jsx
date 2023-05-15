@@ -15,14 +15,16 @@ export default function Jeopardy() {
     const [category4, setCategory4] = useState("");
     const [category5, setCategory5] = useState("");
     
+    const [categoryId0, setCategoryId0] = useState("");
+
     const fetch = async () => {
         let categories = await fetchCategories();
-        setCategory0(categories[0].title)
-        setCategory1(categories[1].title)
-        setCategory2(categories[2].title)
-        setCategory3(categories[3].title)
-        setCategory4(categories[4].title)
-        setCategory5(categories[5].title)
+        setCategory0(categories[0])
+        setCategory1(categories[1])
+        setCategory2(categories[2])
+        setCategory3(categories[3])
+        setCategory4(categories[4])
+        setCategory5(categories[5])
         
     }
     useEffect(() => {
@@ -33,56 +35,56 @@ export default function Jeopardy() {
             <table className='gameboard'>
                 <thead>
                     <tr>
-                        <th><TitleBlock category={category0} /></th>
-                        <th><TitleBlock category={category1} /></th>
-                        <th><TitleBlock category={category2} /></th>
-                        <th><TitleBlock category={category3} /></th>
-                        <th><TitleBlock category={category4} /></th>
-                        <th><TitleBlock category={category5} /></th>
+                        <th><TitleBlock category={category0.title} /></th>
+                        <th><TitleBlock category={category1.title} /></th>
+                        <th><TitleBlock category={category2.title} /></th>
+                        <th><TitleBlock category={category3.title} /></th>
+                        <th><TitleBlock category={category4.title} /></th>
+                        <th><TitleBlock category={category5.title} /></th>
 
                     </tr>
                 </thead>
                 <tbody>
 
                     <tr>
-                        <td><PriceBlock price="200" /></td>
-                        <td><PriceBlock price="200" /></td>
-                        <td><PriceBlock price="200" /></td>
-                        <td><PriceBlock price="200" /></td>
-                        <td><PriceBlock price="200" /></td>
-                        <td><PriceBlock price="200" /></td>
+                        <td><PriceBlock price="200" category_id={category0.id} /></td>
+                        <td><PriceBlock price="200" category_id={category1.id} /></td>
+                        <td><PriceBlock price="200" category_id={category2.id} /></td>
+                        <td><PriceBlock price="200" category_id={category3.id} /></td>
+                        <td><PriceBlock price="200" category_id={category4.id} /></td>
+                        <td><PriceBlock price="200" category_id={category5.id} /></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="400" /></td>
-                        <td><PriceBlock price="400" /></td>
-                        <td><PriceBlock price="400" /></td>
-                        <td><PriceBlock price="400" /></td>
-                        <td><PriceBlock price="400" /></td>
-                        <td><PriceBlock price="400" /></td>
+                        <td><PriceBlock price="400" category_id={category0.id} /></td>
+                        <td><PriceBlock price="400" category_id={category1.id} /></td>
+                        <td><PriceBlock price="400" category_id={category2.id} /></td>
+                        <td><PriceBlock price="400" category_id={category3.id} /></td>
+                        <td><PriceBlock price="400" category_id={category4.id} /></td>
+                        <td><PriceBlock price="400" category_id={category5.id} /></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="600" /></td>
-                        <td><PriceBlock price="600" /></td>
-                        <td><PriceBlock price="600" /></td>
-                        <td><PriceBlock price="600" /></td>
-                        <td><PriceBlock price="600" /></td>
-                        <td><PriceBlock price="600" /></td>
+                        <td><PriceBlock price="600" category_id={category0.id} /></td>
+                        <td><PriceBlock price="600" category_id={category1.id} /></td>
+                        <td><PriceBlock price="600" category_id={category2.id} /></td>
+                        <td><PriceBlock price="600" category_id={category3.id} /></td>
+                        <td><PriceBlock price="600" category_id={category4.id} /></td>
+                        <td><PriceBlock price="600" category_id={category5.id} /></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="800" /></td>
-                        <td><PriceBlock price="800" /></td>
-                        <td><PriceBlock price="800" /></td>
-                        <td><PriceBlock price="800" /></td>
-                        <td><PriceBlock price="800" /></td>
-                        <td><PriceBlock price="800" /></td>
+                        <td><PriceBlock price="800" category_id={category0.id} /></td>
+                        <td><PriceBlock price="800" category_id={category1.id} /></td>
+                        <td><PriceBlock price="800" category_id={category2.id} /></td>
+                        <td><PriceBlock price="800" category_id={category3.id} /></td>
+                        <td><PriceBlock price="800" category_id={category4.id} /></td>
+                        <td><PriceBlock price="800" category_id={category5.id} /></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="1000" /></td>
-                        <td><PriceBlock price="1000" /></td>
-                        <td><PriceBlock price="1000" /></td>
-                        <td><PriceBlock price="1000" /></td>
-                        <td><PriceBlock price="1000" /></td>
-                        <td><PriceBlock price="1000" /></td>
+                        <td><PriceBlock price="1000" category_id={category0.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category1.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category2.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category3.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category4.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category5.id} /></td>
                     </tr>
                 </tbody>
             </table>
