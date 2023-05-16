@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-
+import { getClues } from '../services/JeopardyService'
 
 export default function PriceBlock(props) {
 
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log("clicked")
     console.log(props.category_id)
+    let clues = await getClues(props.category_id)
+    let clue = clues[props.clueNum];
+    console.log(clue)
   }
   return (
     <Container>

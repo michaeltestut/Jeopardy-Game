@@ -35,11 +35,12 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-const getClues = async (category_id) => {
+export const getClues = async (category_id) => {
     try {
-        const response = await axios.get('http://jservice.io/api/clues?category='+category_id);
+        const response = await axios.get('http://jservice.io/api/clues?category=' + category_id);
+        return response.data;
     }
     catch (error) {
         console.log(error)
     }
-}
+} 

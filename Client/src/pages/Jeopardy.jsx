@@ -15,8 +15,6 @@ export default function Jeopardy() {
     const [category4, setCategory4] = useState("");
     const [category5, setCategory5] = useState("");
     
-    const [categoryId0, setCategoryId0] = useState("");
-
     const fetch = async () => {
         let categories = await fetchCategories();
         setCategory0(categories[0])
@@ -47,47 +45,50 @@ export default function Jeopardy() {
                 <tbody>
 
                     <tr>
-                        <td><PriceBlock price="200" category_id={category0.id} /></td>
-                        <td><PriceBlock price="200" category_id={category1.id} /></td>
-                        <td><PriceBlock price="200" category_id={category2.id} /></td>
-                        <td><PriceBlock price="200" category_id={category3.id} /></td>
-                        <td><PriceBlock price="200" category_id={category4.id} /></td>
-                        <td><PriceBlock price="200" category_id={category5.id} /></td>
+                        <td><PriceBlock price="200" category_id={category0.id} clueNum="0" /></td>
+                        <td><PriceBlock price="200" category_id={category1.id} clueNum="0"/></td>
+                        <td><PriceBlock price="200" category_id={category2.id} clueNum="0" /></td>
+                        <td><PriceBlock price="200" category_id={category3.id} clueNum="0" /></td>
+                        <td><PriceBlock price="200" category_id={category4.id} clueNum="0" /></td>
+                        <td><PriceBlock price="200" category_id={category5.id} clueNum="0" /></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="400" category_id={category0.id} /></td>
-                        <td><PriceBlock price="400" category_id={category1.id} /></td>
-                        <td><PriceBlock price="400" category_id={category2.id} /></td>
-                        <td><PriceBlock price="400" category_id={category3.id} /></td>
-                        <td><PriceBlock price="400" category_id={category4.id} /></td>
-                        <td><PriceBlock price="400" category_id={category5.id} /></td>
+                        <td><PriceBlock price="400" category_id={category0.id} clueNum="1"/></td>
+                        <td><PriceBlock price="400" category_id={category1.id} clueNum="1"/></td>
+                        <td><PriceBlock price="400" category_id={category2.id} clueNum="1"/></td>
+                        <td><PriceBlock price="400" category_id={category3.id} clueNum="1"/></td>
+                        <td><PriceBlock price="400" category_id={category4.id} clueNum="1"/></td>
+                        <td><PriceBlock price="400" category_id={category5.id} clueNum="1"/></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="600" category_id={category0.id} /></td>
-                        <td><PriceBlock price="600" category_id={category1.id} /></td>
-                        <td><PriceBlock price="600" category_id={category2.id} /></td>
-                        <td><PriceBlock price="600" category_id={category3.id} /></td>
-                        <td><PriceBlock price="600" category_id={category4.id} /></td>
-                        <td><PriceBlock price="600" category_id={category5.id} /></td>
+                        <td><PriceBlock price="600" category_id={category0.id} clueNum="2" /></td>
+                        <td><PriceBlock price="600" category_id={category1.id} clueNum="2"/></td>
+                        <td><PriceBlock price="600" category_id={category2.id} clueNum="2"/></td>
+                        <td><PriceBlock price="600" category_id={category3.id} clueNum="2"/></td>
+                        <td><PriceBlock price="600" category_id={category4.id} clueNum="2"/></td>
+                        <td><PriceBlock price="600" category_id={category5.id} clueNum="2"/></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="800" category_id={category0.id} /></td>
-                        <td><PriceBlock price="800" category_id={category1.id} /></td>
-                        <td><PriceBlock price="800" category_id={category2.id} /></td>
-                        <td><PriceBlock price="800" category_id={category3.id} /></td>
-                        <td><PriceBlock price="800" category_id={category4.id} /></td>
-                        <td><PriceBlock price="800" category_id={category5.id} /></td>
+                        <td><PriceBlock price="800" category_id={category0.id} clueNum="3"/></td>
+                        <td><PriceBlock price="800" category_id={category1.id} clueNum="3"/></td>
+                        <td><PriceBlock price="800" category_id={category2.id} clueNum="3"/></td>
+                        <td><PriceBlock price="800" category_id={category3.id} clueNum="3"/></td>
+                        <td><PriceBlock price="800" category_id={category4.id} clueNum="3"/></td>
+                        <td><PriceBlock price="800" category_id={category5.id} clueNum="3"/></td>
                     </tr>
                     <tr>
-                        <td><PriceBlock price="1000" category_id={category0.id} /></td>
-                        <td><PriceBlock price="1000" category_id={category1.id} /></td>
-                        <td><PriceBlock price="1000" category_id={category2.id} /></td>
-                        <td><PriceBlock price="1000" category_id={category3.id} /></td>
-                        <td><PriceBlock price="1000" category_id={category4.id} /></td>
-                        <td><PriceBlock price="1000" category_id={category5.id} /></td>
+                        <td><PriceBlock price="1000" category_id={category0.id} clueNum="4"/></td>
+                        <td><PriceBlock price="1000" category_id={category1.id} clueNum="4"/></td>
+                        <td><PriceBlock price="1000" category_id={category2.id} clueNum="4"/></td>
+                        <td><PriceBlock price="1000" category_id={category3.id} clueNum="4"/></td>
+                        <td><PriceBlock price="1000" category_id={category4.id} clueNum="4"/></td>
+                        <td><PriceBlock price="1000" category_id={category5.id} clueNum="4"/></td>
                     </tr>
                 </tbody>
             </table>
+            <div>
+                <h3>Score:</h3>
+            </div>
         </Container>
     )
 }
@@ -99,11 +100,15 @@ const Container = styled.div`
         width:100vw;
         height:100vh;
         display:flex;
+        flex-direction:column;
         align-items:start;
         justify-content:center;
-    .gameboard{
-        margin-top:1rem;
-        border:2px solid black;
-        background-color:white;
-    }
+        h3{
+            color:white;
+        }
+        .gameboard{
+            margin-top:1rem;
+            border:2px solid black;
+            background-color:white;
+        }
 `
